@@ -1,3 +1,3 @@
-C# STUDY
+C#, C++ STUDY
 
-인프런 강의 듣고 백준, 프로그래머스 문제 풀이
+인프런 강의 듣고 알고리즘 문제 풀이(Baekjoon Online Judge, programmers)

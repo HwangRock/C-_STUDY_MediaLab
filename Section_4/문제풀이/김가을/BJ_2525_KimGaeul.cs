@@ -10,31 +10,21 @@ namespace Section4_BJ
 	{
 		static void Main(string[] args)
 		{
-			int h, m, time;
-			string input;
-			input = Console.ReadLine();
-			string[] input_array = input.Split('\x020');
-			h = int.Parse(input_array[0]);
-			m = int.Parse(input_array[1]);
-			time = int.Parse(Console.ReadLine());
-
-			if (m + time < 60)
-			{
-				Console.WriteLine(h + " " + (m + time));
-			}
-			else if (m + time > 60)
-			{
-				h += time / 60;
-				m += time % 60;
-
-				
-				if (h >= 24)
-				{
-					h -= 24;
-				}
-
-				Console.WriteLine(h + " " + m);
-			}
+		    int h, m, time;
+		    string input;
+		    input = Console.ReadLine();
+		    string[] input_array = input.Split('\x020');
+		    h = int.Parse(input_array[0]);
+		    m = int.Parse(input_array[1]);
+		    time = int.Parse(Console.ReadLine());
+		
+		    h += ((time + m) / 60) % 24;
+		    m = (time + m) % 60;
+		
+		    
+		
+		    Console.WriteLine(h + " " + m);
+		    
 		}
 	}
 }

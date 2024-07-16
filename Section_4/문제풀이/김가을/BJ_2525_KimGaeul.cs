@@ -21,7 +21,7 @@ namespace Section4_BJ
 		    h += ((time + m) / 60) % 24;
 		    m = (time + m) % 60;
 		
-		    if(h == 24)
+		    if(h >= 24)
 			{
 			    h = h % 24;
 			}

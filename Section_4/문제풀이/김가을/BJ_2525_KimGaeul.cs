@@ -22,16 +22,12 @@ namespace Section4_BJ
 			{
 				Console.WriteLine(h + " " + (m + time));
 			}
-			else if (m + time >= 60)
+			else if (m + time > 60)
 			{
 				h += time / 60;
 				m += time % 60;
 
-				if (m >= 60)
-				{
-					h += 1;
-					m -= 60;
-				}
+				
 				if (h >= 24)
 				{
 					h -= 24;

@@ -1,23 +1,16 @@
-namespace ConsoleApp1
+namespace 윤년
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string X = Console.ReadLine();
-            int numX = int.Parse(X);
+            int year = int.Parse(Console.ReadLine());
 
-            if (numX>=90) { Console.WriteLine("A"); }
+            if (year % 4 == 0 && year % 100 != 0){ Console.WriteLine("1"); }
 
-            else if (numX >= 80) { Console.WriteLine("B"); }
-
-            else if (numX >= 70) { Console.WriteLine("C"); }
-
-            else if (numX >= 60) { Console.WriteLine("D"); }
-
-            else { Console.WriteLine("F"); }
-
-
+            else if (year % 400 == 0) { Console.WriteLine("1"); }
+            
+            else { Console.WriteLine("0"); }
         }
     }
 }

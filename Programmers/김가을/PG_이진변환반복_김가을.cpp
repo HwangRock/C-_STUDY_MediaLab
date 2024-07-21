@@ -6,16 +6,12 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-
     vector<int> answer;
-    //string st = s;
-
     string st = "110010101001";
     string tmp_st, ans_st;
     int count = 0, count_zero = 0, tmp_zero = 0, l = 0;
     
     while (st != "1") {
-
         tmp_st = "", ans_st = "";
 
         //글자 수만큼 반복, 제거된 0 개수 추가
@@ -30,7 +26,6 @@ int main(int argc, char* argv[]) {
             tmp_st += "1";
         }
 
-
         //1만 있는 문자열 길이를 2진법으로 전환
         l = tmp_st.length();
         while (l > 0) {
@@ -40,11 +35,9 @@ int main(int argc, char* argv[]) {
 
         //낮은 자리부터 추가했기 때문에 reverse
         reverse(ans_st.begin(), ans_st.end());
-
-
+        
         //이진 변환한 횟수 추가
         count++;
-
 
         //count_zero에 제거된 0 개수 누적
         count_zero += tmp_zero;

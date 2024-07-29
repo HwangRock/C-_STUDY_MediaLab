@@ -1,18 +1,32 @@
-#include <vector>
 #include <string>
-#include <algorithm>
-#include <iostream>
+#include <vector>
 
-int main(int argc, char const* argv[])
-{
+using namespace std;
 
-    int brown, yellow, w = 0, h = 0;
-    std::vector<int> answer;
-    answer.push_back(w);
-    answer.push_back(h);
-    std::cout << answer[0] << answer[1];
+vector<int> solution(int brown, int yellow) {
+    vector<int> answer;
+    
+    
+    int  w = 0, h = 0;
+    bool able = false;
+
+    for (w = 1; w < 2000000; w++) {
+        //yellow = (w - 2) * (h - 2);
+        //brown = 2 * (h + w - 2);
+        for (h = 1; h <= w; h++) {
+            if (((((w - 2) * (h - 2)) + (2 * (h + w - 2))) == w * h)
+                && ((w - 2) * (h - 2)) == yellow && (2 * (h + w - 2)) == brown) {
+                able = true;
+                answer.push_back(w);
+                answer.push_back(h);
+                break;
+            }
+            if (able) break;
+        }
+
+    }
 
     
-
-    return 0;
+    
+    return answer;
 }

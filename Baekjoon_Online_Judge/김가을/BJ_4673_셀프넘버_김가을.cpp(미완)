@@ -19,7 +19,7 @@ bool NoSelf(int a) {
 
 int main(int argc, char const* argv[])
 {
-    bool ary[10001] = { false, };
+    bool ary[10001] = { false };
     int n = 0;
 
     for (int i = 1; i < 10001; i++) {

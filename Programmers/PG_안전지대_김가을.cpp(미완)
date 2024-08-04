@@ -1,0 +1,27 @@
+
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char const* argv[])
+{
+    int board[5][5] = { {0,0,0,0,0}, {0,0,0,0,0}, {0,0,0,0,0},{0,0,1,0,0}, {0,0,0,0,0}};
+    
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+           // 지뢰가 있으면
+            if (board[i][j] == 1) {
+                //케이스를 나눠서 하면 너무 길어질 듯
+            }
+        }
+    }
+
+    int answer = 0;
+
+    return 0;
+}

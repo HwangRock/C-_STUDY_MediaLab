@@ -5,13 +5,15 @@ public class Solution {
         int[] answer = new int[] {};
         int a = arr[0];
         List<int> l = new List<int>();
-        if(arr.Length==1) 
-        {
-            arr[0] = -1;          
-        }
 
         for(int i=0; i<arr.Length; i++)
         {
+                    if(arr.Length==1) 
+        {
+            arr[0] = -1;
+                        break;
+            
+        }
             if(a>arr[i]) a=arr[i];
         }      
         

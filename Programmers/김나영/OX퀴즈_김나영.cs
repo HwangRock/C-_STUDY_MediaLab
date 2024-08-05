@@ -11,8 +11,9 @@
                {
                    answer = "O";
                }
+           } //괄호 조심//괄호 조심
 
-               else if (quiz[1] == "-")
+               else if (quiz[1] == "-") 
                {
                    int y = a - b;
                    if (y == result)
@@ -21,5 +22,5 @@
                    }
                }
 
-           }
+           
            Console.WriteLine(answer);

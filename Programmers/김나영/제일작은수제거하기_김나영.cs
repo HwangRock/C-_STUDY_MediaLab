@@ -1,4 +1,4 @@
-//오류 : 프로그램에는 진입점에 적합한 정적 'main' 메서드가 포함되어 있지 않습니다
+using System.Collections.Generic;
 
 public class Solution {
     public int[] solution(int[] arr) {

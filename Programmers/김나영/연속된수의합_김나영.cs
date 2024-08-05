@@ -5,7 +5,7 @@ public class Solution {
         int[] answer = new int[] {};
         for (a = 1; a <= total; a++)
         {
-            if(total == (2a + (num-1)) * num / 2) //등차수열 공식
+            if(total == ((2*a + (num-1)) * num) / 2) //등차수열 공식
             {
                 for (i = 0; i <=num; i++)
                 {

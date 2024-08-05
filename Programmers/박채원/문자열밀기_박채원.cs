@@ -21,7 +21,7 @@ public class Solution
         for (int i = 1; i < A.Length; i++)
         {
             // 오른쪽으로 한 칸 회전: 마지막 문자를 앞에 붙이고 나머지 부분을 뒤에 붙임
-            rotated = rotated[^1] + rotated.Substring(0, rotated.Length - 1);
+            rotated = rotated[^1] + rotated.Substring(0, rotated.Length - 1); //tmp랑 비슷 용도
 
             // 회전 결과가 B와 같다면 현재 회전 횟수 i를 반환
             if (rotated.Equals(B))

@@ -7,7 +7,7 @@ public class Solution {
         
         if (A==B)
         {
-            answer = "0";
+            answer = "0"; //answer int임
           
         }
         

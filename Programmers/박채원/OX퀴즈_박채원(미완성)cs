@@ -1,4 +1,4 @@
-string answer = "X";
+           string answer = "X";
            string[] quiz = Console.ReadLine().Split(" ");
            int a = int.Parse(quiz[0]);
            int b = int.Parse(quiz[2]);

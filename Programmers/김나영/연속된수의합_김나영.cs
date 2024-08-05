@@ -1,19 +1,30 @@
+
 using System;
+using System.Collections.Generic;
 
 public class Solution {
     public int[] solution(int num, int total) {
-        int[] answer = new int[] {};
-        for (a = 1; a <= total; a++)
+        
+        List<int>list=new List<int>();
+        int start=(total/num)-(num/2);
+        int end=(total/num)+(num/2);
+
+        if(total%num==0)
         {
-            if(total == ((2*a + (num-1)) * num) / 2) //등차수열 공식
+            for(int i=start;i<=end;i++)
             {
-                for (i = 0; i <=num; i++)
-                {
-                    answer.Add(a+i);
-                }
-                
+                list.Add(i);
             }
-        }   
-        return answer;
+        }
+        else
+        {
+            for(int j=start+1;j<=end;j++)
+            {
+                list.Add(j);
+            }
+        }
+        
+        return list.ToArray();
+
     }
 }

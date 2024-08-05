@@ -11,6 +11,7 @@
                {
                    answer = "O";
                }
+}
 
                else if (quiz[1] == "-")
                {

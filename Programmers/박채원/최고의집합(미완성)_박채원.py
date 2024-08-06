@@ -15,6 +15,7 @@ def solution(n, s):
         best_set[i] += 1
 
     # 결과는 오름차순으로 정렬되어 있음
+    best_set.sort()
     return best_set
 
 def main():

@@ -1,3 +1,6 @@
+//유클리드 호제법에 대한 부연설명
+//https://blog.naver.com/hwang_rock/223213352287
+
 public class Solution
 {
     int gcd(int n, int m)

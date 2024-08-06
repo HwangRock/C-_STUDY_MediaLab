@@ -1,3 +1,6 @@
+//BFS에 대한 부연설명
+//https://blog.naver.com/hwang_rock/223364033766
+
 #include <cstring>
 #include <vector>
 #include <iostream>

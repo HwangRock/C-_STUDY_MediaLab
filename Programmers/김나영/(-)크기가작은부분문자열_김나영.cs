@@ -1,4 +1,3 @@
-//런타임 에러
 using System;
 
 public class Solution {
@@ -6,12 +5,12 @@ public class Solution {
         int answer = 0;
         int tl = t.Length;
         int pl = p.Length;            
-        int num = 0;
+        long num = 0;
         
         for(int i = 0; i < tl - pl + 1; i++)
         {
-            num = int.Parse(t.Substring(i, pl)); 
-            if(num <= int.Parse(p))
+            num = long.Parse(t.Substring(i, pl));  //Substring(int, int) 와야해서 얘들은 int형 이여야함
+            if(num <= long.Parse(p))
             { 
                 answer++;
             }

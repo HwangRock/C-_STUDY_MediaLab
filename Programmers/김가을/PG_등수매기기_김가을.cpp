@@ -1,4 +1,3 @@
-
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -8,24 +7,9 @@
 
 using namespace std;
 
-
-int main(int argc, char const* argv[])
-{
-    // 등수 매기기
-
-    //	실행한 결괏값 [4,4,6,3,3,1,7]이 기댓값 [4,4,6,2,2,1,7]과 다릅니다.
-
-    vector<vector<int>> score;
-    score.push_back({ 80, 70 });
-    score.push_back({ 70, 80 });
-    score.push_back({ 30, 50 });
-    score.push_back({ 90, 100 });
-    score.push_back({ 100, 90 });
-    score.push_back({ 100, 100 });
-    score.push_back({ 10, 30 });
-
+vector<int> solution(vector<vector<int>> score) {
     vector<int> answer;
-
+    int a = 0;
     vector<int> avg, tmp;
     int rank = 1;
     //map : key, value 트리, 중복 허용하지 않음, 내림차순정렬 : map<int, int, greater>map1;
@@ -33,7 +17,7 @@ int main(int argc, char const* argv[])
 
     //각 인덱스별 평균 구하기
     for (int i = 0; i < score.size(); i++) {
-        avg.push_back((score[i][0] + score[i][1]) / 2);
+        avg.push_back((score[i][0] + score[i][1])); //나누기 하면 오류 생겨서 생략
     }
 
     tmp = avg;
@@ -43,20 +27,32 @@ int main(int argc, char const* argv[])
     //map 이용해 중복 점수 처리, 최초로 발견된 점수에 등수 +1
     for (int i = 0; i < tmp.size(); i++) {
         //find : 특정 키가 맵에 있는지 찾고 존재하지 않으면 map_.end() 반환
-        if ((avg[i] != avg[i - 1]) && (map_.find(tmp[i]) == map_.end())) {
+        if ( map_.find(tmp[i]) == map_.end()) {
             //평균 점수에 대한 등수를 기록함
+            
+            //int a = 0;
+            
+            for(int j = i + 1; j < tmp.size(); j++){
+                
+                if(tmp[i] == tmp[j]){
+                    a++;
+                    
+                }
+            }
+            
             map_[tmp[i]] = rank;
-        }
+            rank += a;
+            a = 0;
             rank++;
+        }
+            
         
     }
 
     for (int i = 0; i < tmp.size(); i++) {
+        
         answer.push_back(map_[avg[i]]);
     }
-    for (int i = 0; i < tmp.size(); i++) {
-        cout << answer[i] << " ";
-    }
-
-    return 0;
+    
+    return answer;
 }

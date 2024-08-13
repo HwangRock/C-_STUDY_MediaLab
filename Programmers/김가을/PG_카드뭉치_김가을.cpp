@@ -33,7 +33,7 @@ string solution(vector<string> cards1, vector<string> cards2, vector<string> goa
         if (!q1.empty() && (g == q1_f)) {
             able = true;
             q1.pop();
-        }else if (!q1.empty() && (g == q2_f)) {
+        }else if (!q2.empty() && (g == q2_f)) {
             able = true;
             q2.pop();
         }
